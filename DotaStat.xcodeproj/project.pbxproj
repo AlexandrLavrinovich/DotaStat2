@@ -3,29 +3,57 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		52B70A8D23A021D500075E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70A8C23A021D500075E6C /* AppDelegate.swift */; };
 		52B70A8F23A021D500075E6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70A8E23A021D500075E6C /* SceneDelegate.swift */; };
-		52B70A9123A021D500075E6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70A9023A021D500075E6C /* ViewController.swift */; };
+		52B70A9123A021D500075E6C /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70A9023A021D500075E6C /* HeroesViewController.swift */; };
 		52B70A9423A021D500075E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B70A9223A021D500075E6C /* Main.storyboard */; };
 		52B70A9723A021D500075E6C /* DotaStat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52B70A9523A021D500075E6C /* DotaStat.xcdatamodeld */; };
 		52B70A9923A021DA00075E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B70A9823A021DA00075E6C /* Assets.xcassets */; };
 		52B70A9C23A021DA00075E6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B70A9A23A021DA00075E6C /* LaunchScreen.storyboard */; };
+		52B70AA823A1275F00075E6C /* AdoredPleasedAyeaye-mobile.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 52B70AA723A1275E00075E6C /* AdoredPleasedAyeaye-mobile.mp4 */; };
+		52B70AAA23A131F900075E6C /* ezgif.com-gif-maker.gif in Resources */ = {isa = PBXBuildFile; fileRef = 52B70AA923A131F900075E6C /* ezgif.com-gif-maker.gif */; };
+		52B70AAC23A132B100075E6C /* LogoAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70AAB23A132B100075E6C /* LogoAnimationView.swift */; };
+		52B70AAE23A14C1300075E6C /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70AAD23A14C1300075E6C /* UIView+Constraints.swift */; };
+		52B70AC523A5300100075E6C /* HeroesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70AC423A5300100075E6C /* HeroesCollectionView.swift */; };
+		52B70AC723A5307100075E6C /* HeroesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70AC623A5307100075E6C /* HeroesCollectionViewCell.swift */; };
+		52B70AC923A5319800075E6C /* HeroesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70AC823A5319800075E6C /* HeroesModel.swift */; };
+		52B70ACC23A5323F00075E6C /* APIOpenDota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70ACB23A5323F00075E6C /* APIOpenDota.swift */; };
+		52FBD96423A6690B00F36657 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBD96323A6690B00F36657 /* ContainerViewController.swift */; };
+		52FBD96623A6691500F36657 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBD96523A6691400F36657 /* MenuViewController.swift */; };
+		52FBD96823A66D6B00F36657 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBD96723A66D6B00F36657 /* MenuTableViewCell.swift */; };
+		52FBD96B23A66DB400F36657 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBD96A23A66DB400F36657 /* MenuModel.swift */; };
+		7D3BD92183A9EF45E76C1C6C /* Pods_DotaStat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA91BA01ABD438D33D5F1451 /* Pods_DotaStat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		52B70A8923A021D500075E6C /* DotaStat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotaStat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B70A8C23A021D500075E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B70A8E23A021D500075E6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		52B70A9023A021D500075E6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52B70A9023A021D500075E6C /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
 		52B70A9323A021D500075E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52B70A9623A021D500075E6C /* DotaStat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DotaStat.xcdatamodel; sourceTree = "<group>"; };
 		52B70A9823A021DA00075E6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B70A9B23A021DA00075E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52B70A9D23A021DA00075E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B70AA723A1275E00075E6C /* AdoredPleasedAyeaye-mobile.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdoredPleasedAyeaye-mobile.mp4"; sourceTree = "<group>"; };
+		52B70AA923A131F900075E6C /* ezgif.com-gif-maker.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ezgif.com-gif-maker.gif"; sourceTree = "<group>"; };
+		52B70AAB23A132B100075E6C /* LogoAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAnimationView.swift; sourceTree = "<group>"; };
+		52B70AAD23A14C1300075E6C /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		52B70AC423A5300100075E6C /* HeroesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionView.swift; sourceTree = "<group>"; };
+		52B70AC623A5307100075E6C /* HeroesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionViewCell.swift; sourceTree = "<group>"; };
+		52B70AC823A5319800075E6C /* HeroesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesModel.swift; sourceTree = "<group>"; };
+		52B70ACB23A5323F00075E6C /* APIOpenDota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOpenDota.swift; sourceTree = "<group>"; };
+		52FBD96323A6690B00F36657 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		52FBD96523A6691400F36657 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		52FBD96723A66D6B00F36657 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		52FBD96A23A66DB400F36657 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		AC43CD7B6EBDCB1E9C73D144 /* Pods-DotaStat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaStat.release.xcconfig"; path = "Target Support Files/Pods-DotaStat/Pods-DotaStat.release.xcconfig"; sourceTree = "<group>"; };
+		CA91BA01ABD438D33D5F1451 /* Pods_DotaStat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotaStat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2E72A36F3177308D8AC4D40 /* Pods-DotaStat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaStat.debug.xcconfig"; path = "Target Support Files/Pods-DotaStat/Pods-DotaStat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +61,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D3BD92183A9EF45E76C1C6C /* Pods_DotaStat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D743DF475BD3DB0F6DBF6D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA91BA01ABD438D33D5F1451 /* Pods_DotaStat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		52B70A8023A021D400075E6C = {
 			isa = PBXGroup;
 			children = (
 				52B70A8B23A021D500075E6C /* DotaStat */,
 				52B70A8A23A021D500075E6C /* Products */,
+				92954B8E2E2F7C17F01C0063 /* Pods */,
+				3D743DF475BD3DB0F6DBF6D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +97,85 @@
 		52B70A8B23A021D500075E6C /* DotaStat */ = {
 			isa = PBXGroup;
 			children = (
-				52B70A8C23A021D500075E6C /* AppDelegate.swift */,
+				52FBD96923A66D9900F36657 /* Model */,
+				52B70AF823A6579600075E6C /* Views */,
+				52B70AF723A6575800075E6C /* Controllers */,
+				52B70AC323A52FC800075E6C /* Heroes */,
 				52B70A8E23A021D500075E6C /* SceneDelegate.swift */,
-				52B70A9023A021D500075E6C /* ViewController.swift */,
+				52B70ACA23A5320100075E6C /* APIOpenDota */,
+				52B70A8C23A021D500075E6C /* AppDelegate.swift */,
+				52B70AFF23A6598500075E6C /* Helpers */,
 				52B70A9223A021D500075E6C /* Main.storyboard */,
 				52B70A9823A021DA00075E6C /* Assets.xcassets */,
+				52B70AAB23A132B100075E6C /* LogoAnimationView.swift */,
+				52B70AAD23A14C1300075E6C /* UIView+Constraints.swift */,
+				52B70AA923A131F900075E6C /* ezgif.com-gif-maker.gif */,
+				52B70AA723A1275E00075E6C /* AdoredPleasedAyeaye-mobile.mp4 */,
 				52B70A9A23A021DA00075E6C /* LaunchScreen.storyboard */,
 				52B70A9D23A021DA00075E6C /* Info.plist */,
 				52B70A9523A021D500075E6C /* DotaStat.xcdatamodeld */,
 			);
 			path = DotaStat;
+			sourceTree = "<group>";
+		};
+		52B70AC323A52FC800075E6C /* Heroes */ = {
+			isa = PBXGroup;
+			children = (
+				52B70AC423A5300100075E6C /* HeroesCollectionView.swift */,
+				52B70AC823A5319800075E6C /* HeroesModel.swift */,
+				52B70AC623A5307100075E6C /* HeroesCollectionViewCell.swift */,
+			);
+			path = Heroes;
+			sourceTree = "<group>";
+		};
+		52B70ACA23A5320100075E6C /* APIOpenDota */ = {
+			isa = PBXGroup;
+			children = (
+				52B70ACB23A5323F00075E6C /* APIOpenDota.swift */,
+			);
+			path = APIOpenDota;
+			sourceTree = "<group>";
+		};
+		52B70AF723A6575800075E6C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52B70A9023A021D500075E6C /* HeroesViewController.swift */,
+				52FBD96323A6690B00F36657 /* ContainerViewController.swift */,
+				52FBD96523A6691400F36657 /* MenuViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		52B70AF823A6579600075E6C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52FBD96723A66D6B00F36657 /* MenuTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52B70AFF23A6598500075E6C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		52FBD96923A66D9900F36657 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52FBD96A23A66DB400F36657 /* MenuModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		92954B8E2E2F7C17F01C0063 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2E72A36F3177308D8AC4D40 /* Pods-DotaStat.debug.xcconfig */,
+				AC43CD7B6EBDCB1E9C73D144 /* Pods-DotaStat.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52B70AA023A021DA00075E6C /* Build configuration list for PBXNativeTarget "DotaStat" */;
 			buildPhases = (
+				0EF736BC6E58E71AB3E5847B /* [CP] Check Pods Manifest.lock */,
 				52B70A8523A021D400075E6C /* Sources */,
 				52B70A8623A021D400075E6C /* Frameworks */,
 				52B70A8723A021D400075E6C /* Resources */,
+				09967298689F81FA48147334 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,7 +238,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B70AAA23A131F900075E6C /* ezgif.com-gif-maker.gif in Resources */,
 				52B70A9C23A021DA00075E6C /* LaunchScreen.storyboard in Resources */,
+				52B70AA823A1275F00075E6C /* AdoredPleasedAyeaye-mobile.mp4 in Resources */,
 				52B70A9923A021DA00075E6C /* Assets.xcassets in Resources */,
 				52B70A9423A021D500075E6C /* Main.storyboard in Resources */,
 			);
@@ -136,14 +248,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09967298689F81FA48147334 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DotaStat/Pods-DotaStat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DotaStat/Pods-DotaStat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DotaStat/Pods-DotaStat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0EF736BC6E58E71AB3E5847B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DotaStat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		52B70A8523A021D400075E6C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52B70A9123A021D500075E6C /* ViewController.swift in Sources */,
+				52B70A9123A021D500075E6C /* HeroesViewController.swift in Sources */,
+				52B70AC523A5300100075E6C /* HeroesCollectionView.swift in Sources */,
 				52B70A9723A021D500075E6C /* DotaStat.xcdatamodeld in Sources */,
+				52FBD96423A6690B00F36657 /* ContainerViewController.swift in Sources */,
+				52B70AAC23A132B100075E6C /* LogoAnimationView.swift in Sources */,
+				52B70AAE23A14C1300075E6C /* UIView+Constraints.swift in Sources */,
+				52B70AC923A5319800075E6C /* HeroesModel.swift in Sources */,
+				52FBD96623A6691500F36657 /* MenuViewController.swift in Sources */,
 				52B70A8D23A021D500075E6C /* AppDelegate.swift in Sources */,
+				52FBD96823A66D6B00F36657 /* MenuTableViewCell.swift in Sources */,
+				52FBD96B23A66DB400F36657 /* MenuModel.swift in Sources */,
+				52B70AC723A5307100075E6C /* HeroesCollectionViewCell.swift in Sources */,
+				52B70ACC23A5323F00075E6C /* APIOpenDota.swift in Sources */,
 				52B70A8F23A021D500075E6C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,11 +450,13 @@
 		};
 		52B70AA123A021DA00075E6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2E72A36F3177308D8AC4D40 /* Pods-DotaStat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BU3KF3675Y;
 				INFOPLIST_FILE = DotaStat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,17 +464,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.DotaStat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		52B70AA223A021DA00075E6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC43CD7B6EBDCB1E9C73D144 /* Pods-DotaStat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BU3KF3675Y;
 				INFOPLIST_FILE = DotaStat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +484,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.DotaStat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
