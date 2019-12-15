@@ -46,7 +46,7 @@ class HeroesViewController: UIViewController {
             self.heroesCollectionView.set(cells: self.heroes)
             self.heroesCollectionView.reloadData()
         }
-        
+//        
 //        view.addSubview(logoAnimationView)
 //        logoAnimationView.pinEdgesToSuperView()
 //        logoAnimationView.logoGifImageView.delegate = self
