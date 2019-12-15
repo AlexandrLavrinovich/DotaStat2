@@ -1,24 +1,30 @@
 PODS:
   - Alamofire (4.9.0)
+  - SteamLogin (0.1.4):
+    - SteamLogin/Login (= 0.1.4)
+  - SteamLogin/Login (0.1.4)
   - SwiftyGif (5.2.0)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - SteamLogin
   - SwiftyGif (~> 5.2)
   - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - SteamLogin
     - SwiftyGif
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  SteamLogin: 86eee7733cfaa417242671524f39561b0c22700c
   SwiftyGif: b85c6b33a9411859d9e1db998b6a8214aea942df
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: ac6a01827502675fe85eb84e916a62e18a6fc7ed
+PODFILE CHECKSUM: 8d597a69a8ba8e35823115c53de8241688bde519
 
 COCOAPODS: 1.8.4

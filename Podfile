@@ -7,6 +7,7 @@ target 'DotaStat' do
   pod 'SwiftyGif', '~> 5.2'
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'SteamLogin'
   # Pods for DotaStat
 
 end

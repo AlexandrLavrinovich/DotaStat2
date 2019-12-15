@@ -22,10 +22,8 @@
 		52B70AC723A5307100075E6C /* HeroesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70AC623A5307100075E6C /* HeroesCollectionViewCell.swift */; };
 		52B70AC923A5319800075E6C /* HeroesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70AC823A5319800075E6C /* HeroesModel.swift */; };
 		52B70ACC23A5323F00075E6C /* APIOpenDota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70ACB23A5323F00075E6C /* APIOpenDota.swift */; };
-		52FBD96423A6690B00F36657 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBD96323A6690B00F36657 /* ContainerViewController.swift */; };
-		52FBD96623A6691500F36657 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBD96523A6691400F36657 /* MenuViewController.swift */; };
-		52FBD96823A66D6B00F36657 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBD96723A66D6B00F36657 /* MenuTableViewCell.swift */; };
-		52FBD96B23A66DB400F36657 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBD96A23A66DB400F36657 /* MenuModel.swift */; };
+		52FBD97723A6C35700F36657 /* SteamAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBD97623A6C35700F36657 /* SteamAuthViewController.swift */; };
+		52FBD97923A6C51200F36657 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBD97823A6C51200F36657 /* MainTabBarController.swift */; };
 		7D3BD92183A9EF45E76C1C6C /* Pods_DotaStat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA91BA01ABD438D33D5F1451 /* Pods_DotaStat.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,10 +45,8 @@
 		52B70AC623A5307100075E6C /* HeroesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionViewCell.swift; sourceTree = "<group>"; };
 		52B70AC823A5319800075E6C /* HeroesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesModel.swift; sourceTree = "<group>"; };
 		52B70ACB23A5323F00075E6C /* APIOpenDota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOpenDota.swift; sourceTree = "<group>"; };
-		52FBD96323A6690B00F36657 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		52FBD96523A6691400F36657 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		52FBD96723A66D6B00F36657 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
-		52FBD96A23A66DB400F36657 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		52FBD97623A6C35700F36657 /* SteamAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteamAuthViewController.swift; sourceTree = "<group>"; };
+		52FBD97823A6C51200F36657 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		AC43CD7B6EBDCB1E9C73D144 /* Pods-DotaStat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaStat.release.xcconfig"; path = "Target Support Files/Pods-DotaStat/Pods-DotaStat.release.xcconfig"; sourceTree = "<group>"; };
 		CA91BA01ABD438D33D5F1451 /* Pods_DotaStat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotaStat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E72A36F3177308D8AC4D40 /* Pods-DotaStat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaStat.debug.xcconfig"; path = "Target Support Files/Pods-DotaStat/Pods-DotaStat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,8 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				52B70A9023A021D500075E6C /* HeroesViewController.swift */,
-				52FBD96323A6690B00F36657 /* ContainerViewController.swift */,
-				52FBD96523A6691400F36657 /* MenuViewController.swift */,
+				52FBD97623A6C35700F36657 /* SteamAuthViewController.swift */,
+				52FBD97823A6C51200F36657 /* MainTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -149,7 +145,6 @@
 		52B70AF823A6579600075E6C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				52FBD96723A66D6B00F36657 /* MenuTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,7 +159,6 @@
 		52FBD96923A66D9900F36657 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				52FBD96A23A66DB400F36657 /* MenuModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,17 +289,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FBD97723A6C35700F36657 /* SteamAuthViewController.swift in Sources */,
 				52B70A9123A021D500075E6C /* HeroesViewController.swift in Sources */,
+				52FBD97923A6C51200F36657 /* MainTabBarController.swift in Sources */,
 				52B70AC523A5300100075E6C /* HeroesCollectionView.swift in Sources */,
 				52B70A9723A021D500075E6C /* DotaStat.xcdatamodeld in Sources */,
-				52FBD96423A6690B00F36657 /* ContainerViewController.swift in Sources */,
 				52B70AAC23A132B100075E6C /* LogoAnimationView.swift in Sources */,
 				52B70AAE23A14C1300075E6C /* UIView+Constraints.swift in Sources */,
 				52B70AC923A5319800075E6C /* HeroesModel.swift in Sources */,
-				52FBD96623A6691500F36657 /* MenuViewController.swift in Sources */,
 				52B70A8D23A021D500075E6C /* AppDelegate.swift in Sources */,
-				52FBD96823A66D6B00F36657 /* MenuTableViewCell.swift in Sources */,
-				52FBD96B23A66DB400F36657 /* MenuModel.swift in Sources */,
 				52B70AC723A5307100075E6C /* HeroesCollectionViewCell.swift in Sources */,
 				52B70ACC23A5323F00075E6C /* APIOpenDota.swift in Sources */,
 				52B70A8F23A021D500075E6C /* SceneDelegate.swift in Sources */,

@@ -11,23 +11,15 @@ import SwiftyGif
 import Alamofire
 import SwiftyJSON
 
-protocol HeroesViewControllerDelegate {
-    func toggleMenu()
-}
-
 class HeroesViewController: UIViewController {
 
     let logoAnimationView = LogoAnimationView()
+    private var tabVC = MainTabBarController()
     private var heroesCollectionView = HeroesCollectionView()
-    var delegate: HeroesViewControllerDelegate?
 
+    @IBOutlet weak var tabBar: UITabBarItem!
+    
     private var heroes = [HeroesModel]()
-    @IBOutlet weak var titleLabelBar: UILabel!
-    
-    @IBAction func menuButton(_ sender: UIButton) {
-        delegate?.toggleMenu()
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +27,11 @@ class HeroesViewController: UIViewController {
         
         heroesCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         heroesCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        heroesCollectionView.topAnchor.constraint(equalTo: titleLabelBar.bottomAnchor).isActive = true
+//        heroesCollectionView.topAnchor.constraint(equalTo: titleLabelBar.bottomAnchor).isActive = true
 //        heroesCollectionView.heightAnchor.constraint(equalToConstant: 350).isActive = true
-//        heroesCollectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        heroesCollectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         heroesCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
         
         
         APIOpenDota.fetchUsersData { user in
