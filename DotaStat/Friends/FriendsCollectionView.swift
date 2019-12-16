@@ -23,8 +23,8 @@ class FriendsCollectionView: UICollectionView, UICollectionViewDelegate, UIColle
         register(FriendsCollectionViewCell.self, forCellWithReuseIdentifier: FriendsCollectionViewCell.reuseId)
         
         translatesAutoresizingMaskIntoConstraints = false
-        layout.minimumLineSpacing = Constants.galleryMinimumLineSpacing
-        contentInset = UIEdgeInsets(top: 0, left: Constants.leftDistanceToView, bottom: 0, right: Constants.rightDistanceToView)
+        layout.minimumLineSpacing = ConstantsFriend.galleryMinimumLineSpacing
+        contentInset = UIEdgeInsets(top: 0, left: ConstantsFriend.leftDistanceToView, bottom: 0, right: ConstantsFriend.rightDistanceToView)
         
         
         showsHorizontalScrollIndicator = false
@@ -53,7 +53,7 @@ class FriendsCollectionView: UICollectionView, UICollectionViewDelegate, UIColle
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Constants.galleryItemWidth, height: frame.height * 0.8)
+        return CGSize(width: ConstantsFriend.galleryItemWidth, height: frame.height * 0.9)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -33,3 +33,10 @@ class PlayerModel {
         self.lastLog = "Logoff: \(dateFormatter.string(from: lastLogOut))"
     }
 }
+
+struct ConstantsFriend {
+    static let leftDistanceToView: CGFloat = 10
+    static let rightDistanceToView: CGFloat = 40
+    static let galleryMinimumLineSpacing: CGFloat = 10
+    static let galleryItemWidth = (UIScreen.main.bounds.width - ConstantsFriend.leftDistanceToView - ConstantsFriend.rightDistanceToView - (ConstantsFriend.galleryMinimumLineSpacing / 1)) / 3
+}

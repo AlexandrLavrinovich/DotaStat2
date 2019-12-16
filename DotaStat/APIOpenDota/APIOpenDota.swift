@@ -13,6 +13,7 @@ import SwiftyJSON
 enum APIOpenDota {
     static func fetchUsersData(completion: @escaping ([HeroesModel]) -> Void) {
         var heroes = [HeroesModel]()
+        DispatchQueue.global(qos: .background).async {
             Alamofire
                 .request("https://api.opendota.com/api/heroStats")
                 .responseJSON(queue: DispatchQueue.global(qos: .background), completionHandler: {(response) in
@@ -42,69 +43,77 @@ enum APIOpenDota {
                         
                     })
                     heroes.sort { $0.heroName < $1.heroName }
-                    DispatchQueue.main.async{
+                    DispatchQueue.main.async {
                         completion(heroes)
                     }
+                    
                 case .failure(let error):
                     print(error.localizedDescription)
                 }
             })
+        }
     }
     
     static func fetchProfileData(key: String, steamId: String, completion: @escaping(PlayerModel) -> Void) {
 //        var playerPlace = [PlayerModel]()
-        Alamofire
-        .request("https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key=\(key)&steamids=\(steamId)")
-            .responseJSON(queue: DispatchQueue.global(qos: .background), completionHandler: { (response) in
-                switch response.result {
-                case .success(let value):
-                    let json = JSON(value)
-                    let data = json["response"]
-                    let player = data["players"]
-                    player.array?.forEach( { (step) in
-                        let playerName = step["personaname"].string
-                        let avatarUrl = step["avatarfull"].string
-                        let imageUrl = URL(string: avatarUrl!)!
-                        let imageData = try! Data(contentsOf: imageUrl)
-                        let image = UIImage(data: imageData)
-                        guard let timeCreated = step["timecreated"].int64 else { return }
-                        let lastLog = step["lastlogoff"].int64
-                        let playerPlace = (PlayerModel(playerName: playerName!, mainImage: image!, createDate: timeCreated, lastLog: lastLog!)!)
-                        DispatchQueue.main.async {
-                            completion(playerPlace)
-                        }
-                    })
-                    
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
+        DispatchQueue.global(qos: .background).async {
+            Alamofire
+                .request("https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key=\(key)&steamids=\(steamId)")
+                .responseJSON(queue: DispatchQueue.global(qos: .background), completionHandler: { (response) in
+                    switch response.result {
+                    case .success(let value):
+                        let json = JSON(value)
+                        let data = json["response"]
+                        let player = data["players"]
+                        player.array?.forEach( { (step) in
+                            let playerName = step["personaname"].string
+                            let avatarUrl = step["avatarfull"].string
+                            let imageUrl = URL(string: avatarUrl!)!
+                            let imageData = try! Data(contentsOf: imageUrl)
+                            let image = UIImage(data: imageData)
+                            guard let timeCreated = step["timecreated"].int64 else { return }
+                            let lastLog = step["lastlogoff"].int64
+                            let playerPlace = (PlayerModel(playerName: playerName!, mainImage: image!, createDate: timeCreated, lastLog: lastLog!)!)
+                            DispatchQueue.main.async {
+                                completion(playerPlace)
+                            }
+                            
+                        })
+                        
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
 
-            })
+                })
+        }
+        
     }
     
     static func fetchFriendsList(key: String, steamId: String, completion: @escaping([String]) -> Void) {
         var friendList = [String]()
-        Alamofire
-        .request("https://api.steampowered.com/ISteamUser/GetFriendList/v1/?key=\(key)&steamid=\(steamId)")
-            .responseJSON(queue: DispatchQueue.global(qos: .background), completionHandler: { (response) in
-                switch response.result {
-                case .success(let value):
-                    let json = JSON(value)
-                    let data = json["friendslist"]
-                    let player = data["friends"]
-                    player.array?.forEach( { (step) in
-                        let friendId = step["steamid"].string
-                        friendList.append(friendId!)
+        DispatchQueue.global(qos: .background).async {
+            Alamofire
+            .request("https://api.steampowered.com/ISteamUser/GetFriendList/v1/?key=\(key)&steamid=\(steamId)")
+                .responseJSON(queue: DispatchQueue.global(qos: .background), completionHandler: { (response) in
+                    switch response.result {
+                    case .success(let value):
+                        let json = JSON(value)
+                        let data = json["friendslist"]
+                        let player = data["friends"]
+                        player.array?.forEach( { (step) in
+                            let friendId = step["steamid"].string
+                            friendList.append(friendId!)
+                        })
                         DispatchQueue.main.async {
                             completion(friendList)
                         }
-                    })
-                    
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
+                        
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
 
-            })
+                })
+        }
     }
     
     

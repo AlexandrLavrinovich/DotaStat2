@@ -40,6 +40,7 @@ class HeroesViewController: UIViewController {
 //        heroesCollectionView.heightAnchor.constraint(equalToConstant: 350).isActive = true
         heroesCollectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         heroesCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
         activityIndicator()
         indicator.startAnimating()
         indicator.backgroundColor = .none

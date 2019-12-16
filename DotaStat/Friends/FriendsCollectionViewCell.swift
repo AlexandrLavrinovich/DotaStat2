@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class FriendsCollectionViewCell: UICollectionViewCell {
     
@@ -21,7 +22,7 @@ class FriendsCollectionViewCell: UICollectionViewCell {
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 12, weight: .bold)
         label.textColor = #colorLiteral(red: 1, green: 0.6235294118, blue: 0.1098039216, alpha: 1)
         label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -30,25 +31,25 @@ class FriendsCollectionViewCell: UICollectionViewCell {
     
     let smallDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        label.font = UIFont.systemFont(ofSize: 10, weight: .semibold)
         label.textColor = #colorLiteral(red: 1, green: 0.6235294118, blue: 0.1098039216, alpha: 1)
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    let iconImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
-    }()
-    
-    let costLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 24, weight: .light)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+//    let iconImageView: UIImageView = {
+//        let imageView = UIImageView()
+//        imageView.translatesAutoresizingMaskIntoConstraints = false
+//        return imageView
+//    }()
+//
+//    let costLabel: UILabel = {
+//        let label = UILabel()
+//        label.font = UIFont.systemFont(ofSize: 24, weight: .light)
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        return label
+//    }()
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -63,30 +64,37 @@ class FriendsCollectionViewCell: UICollectionViewCell {
         
         
         // mainImageView constraints
-        mainImageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        mainImageView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        mainImageView.topAnchor.constraint(equalTo: topAnchor, constant: 40).isActive = true
+        mainImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
+        mainImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5).isActive = true
+        mainImageView.topAnchor.constraint(equalTo: topAnchor, constant: 5).isActive = true
         mainImageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 1/2).isActive = true
         
         // nameLabel constraints
-        nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
+        nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
         nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        nameLabel.topAnchor.constraint(equalTo: mainImageView.bottomAnchor, constant: 12).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: mainImageView.bottomAnchor, constant: 5).isActive = true
         
         // smallDescriptionLabel constraints
-        smallDescriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
-        smallDescriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8).isActive = true
-        smallDescriptionLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/2, constant: 10).isActive = true
+//        smallDescriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
+//        smallDescriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8).isActive = true
+//        smallDescriptionLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/2, constant: 5).isActive = true
+        
+        smallDescriptionLabel.snp.makeConstraints{ (make) in
+            make.leading.equalTo(5)
+            make.trailing.equalTo(-5)
+            make.top.equalTo(nameLabel.snp.bottom).inset(5)
+            make.bottom.equalTo(-5)
+        }
         
         // likeImageView constraints
-        iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
-        iconImageView.topAnchor.constraint(equalTo: smallDescriptionLabel.bottomAnchor, constant: 30).isActive = true
-        iconImageView.widthAnchor.constraint(equalToConstant: 24).isActive = true
-        iconImageView.heightAnchor.constraint(equalToConstant: 24).isActive = true
+//        iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
+//        iconImageView.topAnchor.constraint(equalTo: smallDescriptionLabel.bottomAnchor, constant: 30).isActive = true
+//        iconImageView.widthAnchor.constraint(equalToConstant: 24).isActive = true
+//        iconImageView.heightAnchor.constraint(equalToConstant: 24).isActive = true
         
         // costLabel constraints
-        costLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
-        costLabel.centerYAnchor.constraint(equalTo: iconImageView.centerYAnchor).isActive = true
+//        costLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
+//        costLabel.centerYAnchor.constraint(equalTo: iconImageView.centerYAnchor).isActive = true
     }
     
     override func layoutSubviews() {

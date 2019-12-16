@@ -14,13 +14,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        let firstVC = HeroesViewController()
-        let secondVC = SteamAuthViewController()
+        let secondVC = HeroesViewController()
+        let firstVC = SteamAuthViewController()
         
         let f1 = UITabBarItem(title: "first", image: nil, tag: 0)
         let f2 = UITabBarItem(title: "second", image: nil, tag: 1)
         
-        secondVC.view.backgroundColor = .green
+//        secondVC.view.backgroundColor = .green
         
         firstVC.tabBarItem = f1
         secondVC.tabBarItem = f2
