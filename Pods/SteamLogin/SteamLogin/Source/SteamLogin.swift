@@ -14,5 +14,7 @@ public class SteamLogin {
         let loginVC = SteamLoginVC(loginHandler: completion)
         let navigationVC = UINavigationController(rootViewController: loginVC)
         vc.present(navigationVC, animated: true, completion: nil)
+
+        
     }
 }

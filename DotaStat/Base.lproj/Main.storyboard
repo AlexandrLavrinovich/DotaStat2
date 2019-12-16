@@ -17,7 +17,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="AiG-vz-Q72"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="lJb-iw-WU1"/>
+                    <tabBarItem key="tabBarItem" title="Item 2" selectedImage="account" id="lJb-iw-WU1"/>
                     <connections>
                         <outlet property="tabBar" destination="lJb-iw-WU1" id="UYt-0r-vg6"/>
                     </connections>
@@ -31,14 +31,12 @@
             <objects>
                 <viewController id="qQU-gl-Xvi" customClass="SteamAuthViewController" customModule="DotaStat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GKJ-r9-PNw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="JkG-wU-LkB"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="DvI-vZ-CGO"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" selectedImage="home" id="DvI-vZ-CGO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGL-Bx-82K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,4 +62,8 @@
             <point key="canvasLocation" x="3044" y="149"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="account" width="40" height="40"/>
+        <image name="home" width="40" height="40"/>
+    </resources>
 </document>

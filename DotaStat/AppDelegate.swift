@@ -15,15 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        let firstVC = HeroesViewController()
-        let secondVC = SteamAuthViewController()
         
-        let tabBarVC = UITabBarController()
-        tabBarVC.setViewControllers([firstVC, secondVC], animated: true)
-        
-        self.window?.rootViewController = tabBarVC
-        self.window?.makeKeyAndVisible()
         
         return true
     }

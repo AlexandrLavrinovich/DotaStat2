@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.9.0)
+  - SnapKit (5.0.1)
   - SteamLogin (0.1.4):
     - SteamLogin/Login (= 0.1.4)
   - SteamLogin/Login (0.1.4)
@@ -8,6 +9,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - SnapKit
   - SteamLogin
   - SwiftyGif (~> 5.2)
   - SwiftyJSON
@@ -15,16 +17,18 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - SnapKit
     - SteamLogin
     - SwiftyGif
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SteamLogin: 86eee7733cfaa417242671524f39561b0c22700c
   SwiftyGif: b85c6b33a9411859d9e1db998b6a8214aea942df
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 8d597a69a8ba8e35823115c53de8241688bde519
+PODFILE CHECKSUM: adfff1b89cadc4918fbb3871f2bd2b091f227e4c
 
 COCOAPODS: 1.8.4

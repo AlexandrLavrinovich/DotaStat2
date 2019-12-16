@@ -21,6 +21,15 @@ class HeroesViewController: UIViewController {
     
     private var heroes = [HeroesModel]()
     
+    var indicator = UIActivityIndicatorView()
+
+    func activityIndicator() {
+        indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        indicator.style = UIActivityIndicatorView.Style.medium
+        indicator.center = self.view.center
+        self.view.addSubview(indicator)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(heroesCollectionView)
@@ -31,13 +40,17 @@ class HeroesViewController: UIViewController {
 //        heroesCollectionView.heightAnchor.constraint(equalToConstant: 350).isActive = true
         heroesCollectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         heroesCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        
+        activityIndicator()
+        indicator.startAnimating()
+        indicator.backgroundColor = .none
         
         
         APIOpenDota.fetchUsersData { user in
             self.heroes = user
             self.heroesCollectionView.set(cells: self.heroes)
             self.heroesCollectionView.reloadData()
+            self.indicator.stopAnimating()
+            self.indicator.hidesWhenStopped = true
         }
 //        
 //        view.addSubview(logoAnimationView)

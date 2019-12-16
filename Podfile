@@ -8,6 +8,7 @@ target 'DotaStat' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'SteamLogin'
+  pod 'SnapKit'
   # Pods for DotaStat
 
 end

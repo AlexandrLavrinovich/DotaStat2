@@ -8,9 +8,9 @@
 
 import UIKit
 
-class HeroesCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class FriendsCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    var cells = [HeroesModel]()
+    var cells = [PlayerModel]()
     
 
      init() {
@@ -20,7 +20,7 @@ class HeroesCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
         backgroundColor = #colorLiteral(red: 0.1803921569, green: 0.768627451, blue: 0.7137254902, alpha: 0.85)
         delegate = self
         dataSource = self
-        register(HeroesCollectionViewCell.self, forCellWithReuseIdentifier: HeroesCollectionViewCell.reuseId)
+        register(FriendsCollectionViewCell.self, forCellWithReuseIdentifier: FriendsCollectionViewCell.reuseId)
         
         translatesAutoresizingMaskIntoConstraints = false
         layout.minimumLineSpacing = Constants.galleryMinimumLineSpacing
@@ -33,7 +33,7 @@ class HeroesCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
         
     }
     
-    func set(cells: [HeroesModel]) {
+    func set(cells: [PlayerModel]) {
         self.cells = cells
     }
     
@@ -42,11 +42,10 @@ class HeroesCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: HeroesCollectionViewCell.reuseId, for: indexPath) as! HeroesCollectionViewCell
+        let cell = dequeueReusableCell(withReuseIdentifier: FriendsCollectionViewCell.reuseId, for: indexPath) as! FriendsCollectionViewCell
         cell.mainImageView.image = cells[indexPath.row].mainImage
-        cell.nameLabel.text = cells[indexPath.row].heroName
-        cell.iconImageView.image = cells[indexPath.row].iconImage
-        cell.smallDescriptionLabel.text = cells[indexPath.row].heroRoles
+        cell.nameLabel.text = cells[indexPath.row].playerName
+        cell.smallDescriptionLabel.text = cells[indexPath.row].createDate
 //        cell.smallDescriptionLabel.text = cells[indexPath.row].smallDescription
 //        cell.costLabel.text = "$\(cells[indexPath.row].cost)"
         return cell
@@ -54,7 +53,6 @@ class HeroesCollectionView: UICollectionView, UICollectionViewDelegate, UICollec
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: Constants.galleryItemWidth, height: frame.height * 0.2)
         return CGSize(width: Constants.galleryItemWidth, height: frame.height * 0.8)
     }
     required init?(coder aDecoder: NSCoder) {

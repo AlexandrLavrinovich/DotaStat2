@@ -21,6 +21,7 @@ public class SteamLoginVC: UIViewController {
         case initError = "init(coder:) has not been implemented"
     }
     
+    
     var loginWebView: WKWebView!
     
     var loginHandler: SteamLoginVCHandler
@@ -30,6 +31,7 @@ public class SteamLoginVC: UIViewController {
         let loginVC = SteamLoginVC(loginHandler: completion, navigationBarColor: navigationBarColor)
         let navigationVC = UINavigationController(rootViewController: loginVC)
         vc.present(navigationVC, animated: true, completion: nil)
+        
     }
     
     public init(loginHandler: @escaping SteamLoginVCHandler, navigationBarColor: UIColor = defaultNavigationBarColor) {

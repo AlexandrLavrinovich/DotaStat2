@@ -24,6 +24,9 @@
 		52B70ACC23A5323F00075E6C /* APIOpenDota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70ACB23A5323F00075E6C /* APIOpenDota.swift */; };
 		52FBD97723A6C35700F36657 /* SteamAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBD97623A6C35700F36657 /* SteamAuthViewController.swift */; };
 		52FBD97923A6C51200F36657 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBD97823A6C51200F36657 /* MainTabBarController.swift */; };
+		52FBD97B23A7729A00F36657 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBD97A23A7729A00F36657 /* PlayerModel.swift */; };
+		52FBD97E23A787E100F36657 /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBD97D23A787E100F36657 /* FriendsCollectionViewCell.swift */; };
+		52FBD98023A7884D00F36657 /* FriendsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBD97F23A7884D00F36657 /* FriendsCollectionView.swift */; };
 		7D3BD92183A9EF45E76C1C6C /* Pods_DotaStat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA91BA01ABD438D33D5F1451 /* Pods_DotaStat.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +50,9 @@
 		52B70ACB23A5323F00075E6C /* APIOpenDota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOpenDota.swift; sourceTree = "<group>"; };
 		52FBD97623A6C35700F36657 /* SteamAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteamAuthViewController.swift; sourceTree = "<group>"; };
 		52FBD97823A6C51200F36657 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		52FBD97A23A7729A00F36657 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		52FBD97D23A787E100F36657 /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
+		52FBD97F23A7884D00F36657 /* FriendsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionView.swift; sourceTree = "<group>"; };
 		AC43CD7B6EBDCB1E9C73D144 /* Pods-DotaStat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaStat.release.xcconfig"; path = "Target Support Files/Pods-DotaStat/Pods-DotaStat.release.xcconfig"; sourceTree = "<group>"; };
 		CA91BA01ABD438D33D5F1451 /* Pods_DotaStat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotaStat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E72A36F3177308D8AC4D40 /* Pods-DotaStat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaStat.debug.xcconfig"; path = "Target Support Files/Pods-DotaStat/Pods-DotaStat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,13 +99,14 @@
 		52B70A8B23A021D500075E6C /* DotaStat */ = {
 			isa = PBXGroup;
 			children = (
+				52FBD97C23A787BA00F36657 /* Friends */,
 				52FBD96923A66D9900F36657 /* Model */,
 				52B70AF823A6579600075E6C /* Views */,
 				52B70AF723A6575800075E6C /* Controllers */,
 				52B70AC323A52FC800075E6C /* Heroes */,
-				52B70A8E23A021D500075E6C /* SceneDelegate.swift */,
 				52B70ACA23A5320100075E6C /* APIOpenDota */,
 				52B70A8C23A021D500075E6C /* AppDelegate.swift */,
+				52B70A8E23A021D500075E6C /* SceneDelegate.swift */,
 				52B70AFF23A6598500075E6C /* Helpers */,
 				52B70A9223A021D500075E6C /* Main.storyboard */,
 				52B70A9823A021DA00075E6C /* Assets.xcassets */,
@@ -118,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				52B70AC423A5300100075E6C /* HeroesCollectionView.swift */,
-				52B70AC823A5319800075E6C /* HeroesModel.swift */,
 				52B70AC623A5307100075E6C /* HeroesCollectionViewCell.swift */,
 			);
 			path = Heroes;
@@ -159,8 +165,19 @@
 		52FBD96923A66D9900F36657 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				52B70AC823A5319800075E6C /* HeroesModel.swift */,
+				52FBD97A23A7729A00F36657 /* PlayerModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		52FBD97C23A787BA00F36657 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				52FBD97D23A787E100F36657 /* FriendsCollectionViewCell.swift */,
+				52FBD97F23A7884D00F36657 /* FriendsCollectionView.swift */,
+			);
+			path = Friends;
 			sourceTree = "<group>";
 		};
 		92954B8E2E2F7C17F01C0063 /* Pods */ = {
@@ -292,9 +309,12 @@
 				52FBD97723A6C35700F36657 /* SteamAuthViewController.swift in Sources */,
 				52B70A9123A021D500075E6C /* HeroesViewController.swift in Sources */,
 				52FBD97923A6C51200F36657 /* MainTabBarController.swift in Sources */,
+				52FBD97E23A787E100F36657 /* FriendsCollectionViewCell.swift in Sources */,
+				52FBD97B23A7729A00F36657 /* PlayerModel.swift in Sources */,
 				52B70AC523A5300100075E6C /* HeroesCollectionView.swift in Sources */,
 				52B70A9723A021D500075E6C /* DotaStat.xcdatamodeld in Sources */,
 				52B70AAC23A132B100075E6C /* LogoAnimationView.swift in Sources */,
+				52FBD98023A7884D00F36657 /* FriendsCollectionView.swift in Sources */,
 				52B70AAE23A14C1300075E6C /* UIView+Constraints.swift in Sources */,
 				52B70AC923A5319800075E6C /* HeroesModel.swift in Sources */,
 				52B70A8D23A021D500075E6C /* AppDelegate.swift in Sources */,
