@@ -12,14 +12,16 @@ import Alamofire
 import SwiftyJSON
 
 class HeroesViewController: UIViewController {
+    
+    fileprivate let searchBarHeight: Int = 40
 
     let logoAnimationView = LogoAnimationView()
-    private var tabVC = MainTabBarController()
-    private var heroesCollectionView = HeroesCollectionView()
+    var tabVC = MainTabBarController()
+    var heroesCollectionView = HeroesCollectionView()
 
     @IBOutlet weak var tabBar: UITabBarItem!
     
-    private var heroes = [HeroesModel]()
+    var heroes: [HeroesModel] = []
     
     var indicator = UIActivityIndicatorView()
 
@@ -31,38 +33,50 @@ class HeroesViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        view.addSubview(heroesCollectionView)
-        
-        heroesCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        heroesCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-//        heroesCollectionView.topAnchor.constraint(equalTo: titleLabelBar.bottomAnchor).isActive = true
-//        heroesCollectionView.heightAnchor.constraint(equalToConstant: 350).isActive = true
-        heroesCollectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        heroesCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        
+//        super.viewDidLoad()
         activityIndicator()
         indicator.startAnimating()
         indicator.backgroundColor = .none
         
         
-        APIOpenDota.fetchUsersData { user in
+        APIOpenDota.fetchHeroesData { user in
             self.heroes = user
             self.heroesCollectionView.set(cells: self.heroes)
-            self.heroesCollectionView.reloadData()
-            self.indicator.stopAnimating()
-            self.indicator.hidesWhenStopped = true
+            DispatchQueue.main.async {
+                self.addView()
+                self.heroesCollectionView.reloadData()
+                self.indicator.stopAnimating()
+                self.indicator.hidesWhenStopped = true
+            }
+            
         }
-//        
-//        view.addSubview(logoAnimationView)
-//        logoAnimationView.pinEdgesToSuperView()
-//        logoAnimationView.logoGifImageView.delegate = self
-//        vc.fetchUsersData()
     }
+    
+    func addView() {
+        view.addSubview(heroesCollectionView)
+//        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: Int(UIScreen.main.bounds.width) , height: searchBarHeight))
+//        searchBar.backgroundColor = .none
+//        searchBar.backgroundImage = .none
+//        view.addSubview(searchBar)
+//
+//        searchBar.snp.makeConstraints{(make) in
+//            make.topMargin.equalTo(10)
+//            make.leadingMargin.equalToSuperview()
+//            make.trailingMargin.equalToSuperview()
+//        }
+        
+        heroesCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        heroesCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        heroesCollectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        heroesCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40).isActive = true
+        
+        
+    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        logoAnimationView.logoGifImageView.startAnimatingGif()
+        view.backgroundColor = #colorLiteral(red: 0.1803921569, green: 0.768627451, blue: 0.7137254902, alpha: 1)
     }
 
 }

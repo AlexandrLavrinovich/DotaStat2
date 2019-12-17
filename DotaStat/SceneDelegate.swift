@@ -14,28 +14,44 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+
         let secondVC = HeroesViewController()
         let firstVC = SteamAuthViewController()
+//        let thirdVC = ChartViewController()
         
-        let f1 = UITabBarItem(title: "first", image: nil, tag: 0)
-        let f2 = UITabBarItem(title: "second", image: nil, tag: 1)
+        let f1 = UITabBarItem(title: "Profile", image: UIImage(named: "account"), tag: 0)
+        let f2 = UITabBarItem(title: "Heroes", image: UIImage(named: "trending"), tag: 1)
+//        f1.setTitleTextAttributes(UIFont(name: "", size: <#T##CGFloat#>), for: <#T##UIControl.State#>)
         
-//        secondVC.view.backgroundColor = .green
+//        let f3 = UITabBarItem(title: "third", image: nil, tag: 2)
         
         firstVC.tabBarItem = f1
         secondVC.tabBarItem = f2
+//        thirdVC.tabBarItem = f3
         
         let tabBarVC = UITabBarController()
+        tabBarVC.tabBar.backgroundColor = #colorLiteral(red: 0.6232550761, green: 0.07247612155, blue: 0.1016658467, alpha: 1)
         tabBarVC.setViewControllers([firstVC, secondVC], animated: true)
+        
+        let options: UIView.AnimationOptions = .transitionCrossDissolve
+        let duration: TimeInterval = 2.1
+        
+        let launchVC = LaunchViewController()
         
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = tabBarVC
+//            window.rootViewController = tabBarVC
+            window.rootViewController = launchVC
+            UIView.transition(with: window, duration: duration, options: options, animations: {}, completion:
+            { completed in
+                window.rootViewController = tabBarVC
+                // maybe do something on completion here
+            })
             self.window = window
             window.makeKeyAndVisible()
         }
-//        guard let _ = (scene as? UIWindowScene) else { return }
     }
+
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

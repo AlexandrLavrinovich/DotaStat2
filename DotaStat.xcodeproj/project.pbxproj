@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		524360C423A89D9D00DDA17C /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524360C323A89D9D00DDA17C /* ChartViewController.swift */; };
+		524360CA23A89F8B00DDA17C /* charts.png in Resources */ = {isa = PBXBuildFile; fileRef = 524360C923A89F8B00DDA17C /* charts.png */; };
+		524360CC23A8A38500DDA17C /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524360CB23A8A38500DDA17C /* MyView.swift */; };
+		524360CE23A8ADE100DDA17C /* ezgif.com-crop.gif in Resources */ = {isa = PBXBuildFile; fileRef = 524360CD23A8ADE100DDA17C /* ezgif.com-crop.gif */; };
+		524360D023A8B29E00DDA17C /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524360CF23A8B29E00DDA17C /* LaunchViewController.swift */; };
+		524360D223A8DFF200DDA17C /* MyHeroesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524360D123A8DFF200DDA17C /* MyHeroesCollectionView.swift */; };
 		52B70A8D23A021D500075E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70A8C23A021D500075E6C /* AppDelegate.swift */; };
 		52B70A8F23A021D500075E6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70A8E23A021D500075E6C /* SceneDelegate.swift */; };
 		52B70A9123A021D500075E6C /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70A9023A021D500075E6C /* HeroesViewController.swift */; };
 		52B70A9423A021D500075E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B70A9223A021D500075E6C /* Main.storyboard */; };
 		52B70A9723A021D500075E6C /* DotaStat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52B70A9523A021D500075E6C /* DotaStat.xcdatamodeld */; };
 		52B70A9923A021DA00075E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B70A9823A021DA00075E6C /* Assets.xcassets */; };
-		52B70A9C23A021DA00075E6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B70A9A23A021DA00075E6C /* LaunchScreen.storyboard */; };
-		52B70AA823A1275F00075E6C /* AdoredPleasedAyeaye-mobile.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 52B70AA723A1275E00075E6C /* AdoredPleasedAyeaye-mobile.mp4 */; };
-		52B70AAA23A131F900075E6C /* ezgif.com-gif-maker.gif in Resources */ = {isa = PBXBuildFile; fileRef = 52B70AA923A131F900075E6C /* ezgif.com-gif-maker.gif */; };
 		52B70AAC23A132B100075E6C /* LogoAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70AAB23A132B100075E6C /* LogoAnimationView.swift */; };
 		52B70AAE23A14C1300075E6C /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70AAD23A14C1300075E6C /* UIView+Constraints.swift */; };
 		52B70AC523A5300100075E6C /* HeroesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B70AC423A5300100075E6C /* HeroesCollectionView.swift */; };
@@ -31,6 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		524360C323A89D9D00DDA17C /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		524360C923A89F8B00DDA17C /* charts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = charts.png; sourceTree = "<group>"; };
+		524360CB23A8A38500DDA17C /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		524360CD23A8ADE100DDA17C /* ezgif.com-crop.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ezgif.com-crop.gif"; sourceTree = "<group>"; };
+		524360CF23A8B29E00DDA17C /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		524360D123A8DFF200DDA17C /* MyHeroesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeroesCollectionView.swift; sourceTree = "<group>"; };
 		52B70A8923A021D500075E6C /* DotaStat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotaStat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B70A8C23A021D500075E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B70A8E23A021D500075E6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,10 +47,7 @@
 		52B70A9323A021D500075E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52B70A9623A021D500075E6C /* DotaStat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DotaStat.xcdatamodel; sourceTree = "<group>"; };
 		52B70A9823A021DA00075E6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		52B70A9B23A021DA00075E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52B70A9D23A021DA00075E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52B70AA723A1275E00075E6C /* AdoredPleasedAyeaye-mobile.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdoredPleasedAyeaye-mobile.mp4"; sourceTree = "<group>"; };
-		52B70AA923A131F900075E6C /* ezgif.com-gif-maker.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ezgif.com-gif-maker.gif"; sourceTree = "<group>"; };
 		52B70AAB23A132B100075E6C /* LogoAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAnimationView.swift; sourceTree = "<group>"; };
 		52B70AAD23A14C1300075E6C /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		52B70AC423A5300100075E6C /* HeroesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionView.swift; sourceTree = "<group>"; };
@@ -107,14 +113,13 @@
 				52B70ACA23A5320100075E6C /* APIOpenDota */,
 				52B70A8C23A021D500075E6C /* AppDelegate.swift */,
 				52B70A8E23A021D500075E6C /* SceneDelegate.swift */,
-				52B70AFF23A6598500075E6C /* Helpers */,
+				52B70AFF23A6598500075E6C /* Extensions */,
 				52B70A9223A021D500075E6C /* Main.storyboard */,
 				52B70A9823A021DA00075E6C /* Assets.xcassets */,
+				524360C923A89F8B00DDA17C /* charts.png */,
+				524360CD23A8ADE100DDA17C /* ezgif.com-crop.gif */,
 				52B70AAB23A132B100075E6C /* LogoAnimationView.swift */,
 				52B70AAD23A14C1300075E6C /* UIView+Constraints.swift */,
-				52B70AA923A131F900075E6C /* ezgif.com-gif-maker.gif */,
-				52B70AA723A1275E00075E6C /* AdoredPleasedAyeaye-mobile.mp4 */,
-				52B70A9A23A021DA00075E6C /* LaunchScreen.storyboard */,
 				52B70A9D23A021DA00075E6C /* Info.plist */,
 				52B70A9523A021D500075E6C /* DotaStat.xcdatamodeld */,
 			);
@@ -142,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				52B70A9023A021D500075E6C /* HeroesViewController.swift */,
+				524360CF23A8B29E00DDA17C /* LaunchViewController.swift */,
+				524360C323A89D9D00DDA17C /* ChartViewController.swift */,
 				52FBD97623A6C35700F36657 /* SteamAuthViewController.swift */,
 				52FBD97823A6C51200F36657 /* MainTabBarController.swift */,
 			);
@@ -151,15 +158,17 @@
 		52B70AF823A6579600075E6C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				524360CB23A8A38500DDA17C /* MyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		52B70AFF23A6598500075E6C /* Helpers */ = {
+		52B70AFF23A6598500075E6C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				524360D123A8DFF200DDA17C /* MyHeroesCollectionView.swift */,
 			);
-			path = Helpers;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		52FBD96923A66D9900F36657 /* Model */ = {
@@ -249,9 +258,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52B70AAA23A131F900075E6C /* ezgif.com-gif-maker.gif in Resources */,
-				52B70A9C23A021DA00075E6C /* LaunchScreen.storyboard in Resources */,
-				52B70AA823A1275F00075E6C /* AdoredPleasedAyeaye-mobile.mp4 in Resources */,
+				524360CE23A8ADE100DDA17C /* ezgif.com-crop.gif in Resources */,
+				524360CA23A89F8B00DDA17C /* charts.png in Resources */,
 				52B70A9923A021DA00075E6C /* Assets.xcassets in Resources */,
 				52B70A9423A021D500075E6C /* Main.storyboard in Resources */,
 			);
@@ -311,9 +319,13 @@
 				52FBD97923A6C51200F36657 /* MainTabBarController.swift in Sources */,
 				52FBD97E23A787E100F36657 /* FriendsCollectionViewCell.swift in Sources */,
 				52FBD97B23A7729A00F36657 /* PlayerModel.swift in Sources */,
+				524360C423A89D9D00DDA17C /* ChartViewController.swift in Sources */,
+				524360CC23A8A38500DDA17C /* MyView.swift in Sources */,
+				524360D023A8B29E00DDA17C /* LaunchViewController.swift in Sources */,
 				52B70AC523A5300100075E6C /* HeroesCollectionView.swift in Sources */,
 				52B70A9723A021D500075E6C /* DotaStat.xcdatamodeld in Sources */,
 				52B70AAC23A132B100075E6C /* LogoAnimationView.swift in Sources */,
+				524360D223A8DFF200DDA17C /* MyHeroesCollectionView.swift in Sources */,
 				52FBD98023A7884D00F36657 /* FriendsCollectionView.swift in Sources */,
 				52B70AAE23A14C1300075E6C /* UIView+Constraints.swift in Sources */,
 				52B70AC923A5319800075E6C /* HeroesModel.swift in Sources */,
@@ -333,14 +345,6 @@
 				52B70A9323A021D500075E6C /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		52B70A9A23A021DA00075E6C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				52B70A9B23A021DA00075E6C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

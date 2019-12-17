@@ -9,6 +9,7 @@ target 'DotaStat' do
   pod 'SwiftyJSON'
   pod 'SteamLogin'
   pod 'SnapKit'
+  pod 'Macaw'
   # Pods for DotaStat
 
 end

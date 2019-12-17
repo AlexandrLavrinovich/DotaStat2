@@ -1,28 +1,32 @@
 //
-//  MainTabBarController.swift
+//  LaunchViewController.swift
 //  DotaStat
 //
-//  Created by MacBook Pro on 16.12.2019.
+//  Created by MacBook Pro on 17.12.2019.
 //  Copyright © 2019 MacBook Pro. All rights reserved.
 //
 
 import UIKit
 import SwiftyGif
 
-class MainTabBarController: UITabBarController {
+class LaunchViewController: UIViewController {
     
-    
-    @IBOutlet weak var mainTabBar: UITabBar!
+    let logoAnimationView = LogoAnimationView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(logoAnimationView)
+        logoAnimationView.pinEdgesToSuperView()
+        logoAnimationView.logoGifImageView.delegate = self
 
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        logoAnimationView.logoGifImageView.startAnimatingGif()
     }
+    
     
     
     
@@ -37,4 +41,10 @@ class MainTabBarController: UITabBarController {
     }
     */
 
+}
+
+extension LaunchViewController: SwiftyGifDelegate {
+    func gifDidStop(sender: UIImageView) {
+        logoAnimationView.isHidden = true
+    }
 }

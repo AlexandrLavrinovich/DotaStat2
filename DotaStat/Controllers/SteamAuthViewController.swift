@@ -11,12 +11,23 @@ import SteamLogin
 import SnapKit
 
 class SteamAuthViewController: UIViewController {
+    
     var steamUser: SteamUser? = nil
     var playerUser: PlayerModel? = nil
     var friends = [String]()
     var friendsModels = [PlayerModel]()
     
     private var friendsCollectionView = FriendsCollectionView()
+    
+    var indicator = UIActivityIndicatorView()
+
+    func activityIndicator() {
+        indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        indicator.style = UIActivityIndicatorView.Style.medium
+        indicator.center = self.view.center
+        self.view.addSubview(indicator)
+    }
+    
      
     override func viewDidAppear(_ animated: Bool) {
         SteamLogin.steamApiKey = "160A1E87653E30D9562DE9E5A47386E5"
@@ -44,11 +55,10 @@ class SteamAuthViewController: UIViewController {
         self.steamUser = SteamUser.load()
         guard steamUser != nil else { return }
         APIOpenDota.fetchProfileData(key: SteamLogin.steamApiKey, steamId: self.steamUser!.steamID64!) { player in
-                    self.playerUser = player
+            self.playerUser = player
             DispatchQueue.main.async {
                 self.addMainView()
             }
-                
             self.addFriendsList()
         }
     }
@@ -109,7 +119,7 @@ class SteamAuthViewController: UIViewController {
         
         let dateLabel: UILabel = {
             let label = UILabel()
-            label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+            label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
             label.textColor = #colorLiteral(red: 1, green: 0.6235294118, blue: 0.1098039216, alpha: 1)
             label.numberOfLines = 2
             label.text = self.playerUser?.createDate
@@ -121,14 +131,14 @@ class SteamAuthViewController: UIViewController {
         
         dateLabel.snp.makeConstraints { (make) in
             make.leadingMargin.equalTo(10)
-            make.trailingMargin.equalTo(20)
+            make.trailingMargin.equalToSuperview().inset(10)
             make.top.equalTo(nameLabel.snp.bottomMargin).inset(-20)
             make.height.equalTo(30)
         }
         
         let lastSign: UILabel = {
             let label = UILabel()
-            label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+            label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
             label.textColor = #colorLiteral(red: 1, green: 0.6235294118, blue: 0.1098039216, alpha: 1)
             label.numberOfLines = 2
             label.text = self.playerUser?.lastLog
@@ -140,7 +150,7 @@ class SteamAuthViewController: UIViewController {
         
         lastSign.snp.makeConstraints { (make) in
             make.leadingMargin.equalTo(10)
-            make.trailingMargin.equalTo(20)
+            make.trailingMargin.equalToSuperview().inset(10)
             make.top.equalTo(dateLabel.snp.bottomMargin).inset(-20)
             make.height.equalTo(30)
         }
@@ -160,7 +170,6 @@ class SteamAuthViewController: UIViewController {
     func addFriendsList() {
         APIOpenDota.fetchFriendsList(key: SteamLogin.steamApiKey, steamId: steamUser!.steamID64!) {  friend in
             self.friends = friend
-            
             for eachFriendId in self.friends {
                 APIOpenDota.fetchProfileData(key: SteamLogin.steamApiKey, steamId: eachFriendId) { friendPlayer in
                     self.friendsModels.append(friendPlayer)

@@ -1,14 +1,18 @@
 PODS:
   - Alamofire (4.9.0)
+  - Macaw (0.9.5):
+    - SWXMLHash
   - SnapKit (5.0.1)
   - SteamLogin (0.1.4):
     - SteamLogin/Login (= 0.1.4)
   - SteamLogin/Login (0.1.4)
   - SwiftyGif (5.2.0)
   - SwiftyJSON (5.0.0)
+  - SWXMLHash (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
+  - Macaw
   - SnapKit
   - SteamLogin
   - SwiftyGif (~> 5.2)
@@ -17,18 +21,22 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Macaw
     - SnapKit
     - SteamLogin
     - SwiftyGif
     - SwiftyJSON
+    - SWXMLHash
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  Macaw: 10bf9e327cb75f24e3225d5229a80ed544df85f0
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SteamLogin: 86eee7733cfaa417242671524f39561b0c22700c
   SwiftyGif: b85c6b33a9411859d9e1db998b6a8214aea942df
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  SWXMLHash: 9cc0c2e4807926c74377724aa8722ee5707a0485
 
-PODFILE CHECKSUM: adfff1b89cadc4918fbb3871f2bd2b091f227e4c
+PODFILE CHECKSUM: 95435d15e1048074fb823698dc7c819c761fdbee
 
 COCOAPODS: 1.8.4

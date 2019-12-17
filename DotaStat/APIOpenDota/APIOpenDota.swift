@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 enum APIOpenDota {
-    static func fetchUsersData(completion: @escaping ([HeroesModel]) -> Void) {
+    static func fetchHeroesData(completion: @escaping ([HeroesModel]) -> Void) {
         var heroes = [HeroesModel]()
         DispatchQueue.global(qos: .background).async {
             Alamofire
@@ -39,14 +39,21 @@ enum APIOpenDota {
                             })
                             return roles
                         }
-                        heroes.append(HeroesModel(heroName: heroName!, mainImage: image!, iconImage: icon!, heroRoles: heroRoles)!)
+                        let baseAttackMin = hero["base_attack_min"].int
+                        let baseAttackMax = hero["base_attack_max"].int
+                        let baseHealth = hero["base_health"].int
+                        let baseMana = hero["base_mana"].int
+                        let primaryAttr = hero["primary_attr"].string
+                        let attackType = hero["attack_type"].string
                         
+//                        heroes.append(HeroesModel(heroName: heroName!, mainImage: image!, iconImage: icon!, heroRoles: heroRoles)!, )
+                        heroes.append(HeroesModel(heroName: heroName!, mainImage: image!, iconImage: icon!, heroRoles: heroRoles, heroAttackMin: baseAttackMin!, heroAttackMax: baseAttackMax!, heroHealth: baseHealth!, heroMana: baseMana!, heroAttr: primaryAttr!, heroAttackType: attackType!)!)
                     })
-                    heroes.sort { $0.heroName < $1.heroName }
+                    
                     DispatchQueue.main.async {
+                        heroes.sort { $0.heroName < $1.heroName }
                         completion(heroes)
                     }
-                    
                 case .failure(let error):
                     print(error.localizedDescription)
                 }
@@ -58,7 +65,7 @@ enum APIOpenDota {
 //        var playerPlace = [PlayerModel]()
         DispatchQueue.global(qos: .background).async {
             Alamofire
-                .request("https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key=\(key)&steamids=\(steamId)")
+            .request("https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key=\(key)&steamids=\(steamId)")
                 .responseJSON(queue: DispatchQueue.global(qos: .background), completionHandler: { (response) in
                     switch response.result {
                     case .success(let value):
